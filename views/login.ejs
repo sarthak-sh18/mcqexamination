@@ -1,0 +1,39 @@
+<% include ./header %>
+<style>
+body{
+    background:url("");
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+</style>
+<center><h1 style="color:black;font-size:30px">INTERFACE</h1></center>
+<center><h1 style="color:black;font-size:15px">presents</h1></center>
+<center><h1 style="color:black;font-size:40px">CODE CONNOISSEUR</h1></center>
+<br>
+<br>
+<h1 style="text-align:center;font-size:30px">Login<h1>
+
+<center>
+    <div class="container">
+    
+    <div class="form-group" style="width:500px; ">
+    <form method="POST" action="/login">
+        
+        <input style="margin-bottom:-10px" type="text" placeholder="Team Name" name="username"class="form-control" required>
+        <br>
+        <input style="margin-bottom:-10px" type="password" placeholder="Password" name="password" class="form-control" required>
+        <br>
+        </center>
+        
+        <div class="container" style="text-align:center">
+        <center>
+            <input type="submit" style="width:100px"class="btn btn-danger btn-md btn-block login-button">
+        </div>
+        </center>
+    </form>
+    </div>
+    </div>
+
+<% include ./footer %>
+

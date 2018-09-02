@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <title>Interface </title>
+    <head>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link  rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class= "ui main text container">
+    <h1 style="text-align:center">LIST OF TEAMS</h1>
+
+<div class="ui top attached segment">
+<div class="ui divided items">
+    <%users.forEach(function(user){%>
+    <div class="item">
+        
+        <div class="content">
+            <h2><%=user.username%></a></h2>
+        
+        
+        <div class="meta">
+            <span><%=user.member1%></span>
+        </div>
+        
+        <div class="meta">
+            <span><%=user.member2%></span>
+        </div>
+        <div class="meta">
+            <span><%=user.lan%></span>
+        </div>
+        
+        <div class="meta">
+            <h3>Score = <%=user.score%></h3>
+            
+        </div>
+        
+        
+        
+        
+    </div>
+    </div>
+    <% }); %>
+</div>
+
+</div>
+</div>
+
+
+<% include ./footer %>

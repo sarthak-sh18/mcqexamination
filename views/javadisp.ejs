@@ -1,0 +1,53 @@
+<% include ./header %>
+
+<% var i = 1%>
+<% var j = 0%>
+
+<% var ans=[]%>
+<div class="container" style="width:700px">
+<div class="ui top attached segment">
+<div class="ui divided items" style="text-align:left">
+    <form action="/scorejava" method="post">
+        <% newuser.score=0;%>
+        <% newuser.attempt=1;%>
+        
+    <% java.forEach(function(javas){%>
+    <br>
+    <div class="item">
+        <div class="content">
+            <h2><strong>Question <%= i%></strong></h2>
+            
+            <% i++%>
+            <%j++%>
+            <p><%- javas.question%></a></p>
+                <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="1"><span><%=javas.option1%></span>
+        </div>
+        <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="2"><span><%=javas.option2%></span>
+        </div>
+        <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="3"> <span><%=javas.option3%></span>
+        </div>
+        <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="4"> <span><%=javas.option4%></span>
+        </div>
+        <% if(newuser.username=='interface'){%>
+<div class="meta">
+            <button href="/javaedit">Edit</button>
+
+        
+        <% } %>
+        </div>
+    </div>
+    </div>
+    <% }); %>
+    <br>
+    <input type="submit" class="ui red basic button" id="submit">
+    
+</div>
+</div>
+</div>
+</div>
+
+<% include ./footer %>

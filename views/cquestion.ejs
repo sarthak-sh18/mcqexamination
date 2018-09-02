@@ -1,0 +1,33 @@
+<% include ./header %>
+<div class="container">
+    <div class="ui main text container segment"  >New C Question</div>
+    <form class="ui form"  action="/questions/c" method="POST">
+        
+        <div class="field">
+            <label>Question</label>
+            <textarea row="5" input type="text" name="cquestion[question]" placeholder="Question" required></textarea>
+        </div>
+        <div class="field">
+            <label>Option 1</label>
+            <input type="text" name="cquestion[option1]" placeholder="Option 1" required>
+        </div>
+        <div class="field">
+            <label>Option 2</label>
+            <input type="text" name="cquestion[option2]" placeholder="Option 2" required>
+        </div>
+        <div class="field">
+            <label>Option 3</label>
+            <input type="text" name="cquestion[option3]" placeholder="Option 3" required>
+        </div>
+        <div class="field">
+            <label>Option 4</label>
+            <input type="text" name="cquestion[option4]" placeholder="Option 4" required>
+        </div>
+        <div class="field">
+            <label>Answer</label>
+            <input type="text" name="cquestion[answer]" placeholder="Answer" required>
+        </div>
+       <input type="submit" class="ui red basic button">
+    </form>
+</div>
+<% include ./footer %>

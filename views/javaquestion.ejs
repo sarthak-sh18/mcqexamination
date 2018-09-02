@@ -1,0 +1,32 @@
+<% include ./header %>
+<div class="container">
+    <div class="ui main text container segment" >New JAVA Question</div>
+    <form  class="ui form" action="/questions/java" method="POST">
+        <div class="field">
+            <label>Question</label>
+            <textarea row="5" input type="text" name="javaques[question]" placeholder="Question" required></textarea>
+        </div>
+        <div class="field">
+            <label>Option 1</label>
+            <input type="text" name="javaques[option1]" placeholder="Option 1" required>
+        </div>
+        <div class="field">
+            <label>Option 2</label>
+            <input type="text" name="javaques[option2]" placeholder="Option 2" required></textarea>
+        </div>
+        <div class="field">
+            <label>Option 3</label>
+            <input type="text" name="javaques[option3]" placeholder="Option 3" required>
+        </div>
+        <div class="field">
+            <label>Option 4</label>
+            <input type="text" name="javaques[option4]" placeholder="Option 4" required>
+        </div>
+        <div class="field">
+            <label>Answer</label>
+            <input type="text" name="javaques[answer]" placeholder="Answer" required>
+        </div>
+       <input type="submit">
+    </form>
+</div>
+<% include ./footer %>

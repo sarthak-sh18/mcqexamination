@@ -1,0 +1,48 @@
+<% include ./header %>
+
+<% var i = 1%>
+<% var j = 0%>
+<% var ans=[]%>
+<br>
+<div class="container" style="width:700px">
+<div class="ui top attached segment">
+<div class="ui divided items" style="text-align:left">
+    <form action="/scorec" method="post">
+        <% newuser.score=0;%>
+        
+    <% cf.forEach(function(clangs){%>
+    <br>
+    <div class="item">
+        <div class="content">
+            <h2><strong>Question <%= i%></strong></h2>
+            
+            <% i++%>
+            <%j++%>
+            <p><strong><%- clangs.question%></strong></a></p>
+                <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="1"><span><%=clangs.option1%></span>
+        </div>
+        <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="2"><span><%=clangs.option2%></span>
+        </div>
+        <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="3"> <span><%=clangs.option3%></span>
+        </div>
+        <div class="meta">
+            <input type="radio" name="choice[<%=j%>]" value="4"> <span><%=clangs.option4%></span>
+        </div>
+        <!--<div class="meta">-->
+        <!--    -->
+        <!--</div>-->
+    </div>
+    </div>
+    <% }); %>
+    <br>
+    <input type="submit" class="ui red basic button" id="submit">
+    
+</div>
+</div>
+</div>
+</div>
+
+<% include ./footer %>
